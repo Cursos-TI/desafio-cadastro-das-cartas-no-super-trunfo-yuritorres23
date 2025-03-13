@@ -6,12 +6,16 @@ int main(){
     int populacao1;
     float area1, pib1;
     int pontos_turisticos1;
+    float densidade_populacional1;
+    float PIB_per_capta1;
 
     // variaveis segunda carta
     char carta2[3];
     int populacao2;
     float area2, pib2;
     int pontos_turisticos2;
+    float densidade_populacional2;
+    float PIB_per_capta2;
 
     // cadastro primeira carta
     printf("Digite o codigo da primeira carta(ex: A01)");
@@ -25,6 +29,12 @@ int main(){
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontos_turisticos1);
 
+    //Adição PIB Per Capta e Densidade populacional carta1
+
+    densidade_populacional1 = (float)(populacao1 / area1);
+
+    PIB_per_capta1 = (float)(pib1 / populacao1);
+
     //cadastro segunda carta
     printf("\nDigite o codigo da segunda carta(ex: B02): ");
     scanf("%s", carta2);
@@ -37,15 +47,18 @@ int main(){
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontos_turisticos2);
 
+    //Adição PIB Per Capta e Densidade populacional carta2
+
+    densidade_populacional2 = (float)(populacao2 / area2);
+
+    PIB_per_capta2 = (float)(pib2 / populacao2);
+
     //exibição dados cadastrados
     printf("\n--- Dados das Cartas ---\n");
-    printf("\nCarta: %s\nPopulação: %d\nÁrea: %.2f km²\nPontos Turisticos: %d\n",
-         carta1, populacao1, area1, pib1, pontos_turisticos1);
-    printf("\nCarta: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões\nPontos Turisticos: %d\n",
-         carta2, populacao2, area2, pib2, pontos_turisticos2);
-
-
-
+    printf("\nCarta: %s\nPopulação: %d\nÁrea: %.2f km²\nPontos Turisticos: %d\nDensidade populacional: %.2f\nPIB per capta: %.2f\n",
+         carta1, populacao1, area1, pib1, pontos_turisticos1, densidade_populacional1, PIB_per_capta1);
+    printf("\nCarta: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões\nPontos Turisticos: %d\nDensidade populacional: %.2f\nPIB per capta: %.2f\n",
+         carta2, populacao2, area2, pib2, pontos_turisticos2, densidade_populacional2, PIB_per_capta2 );
 
     return 0;
 
