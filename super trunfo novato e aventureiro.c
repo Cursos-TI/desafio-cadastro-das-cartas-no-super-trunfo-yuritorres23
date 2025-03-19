@@ -20,7 +20,7 @@ int main(){
     float PIB_per_capta2;
 
     // cadastro primeira carta
-    printf("Digite o codigo da primeira carta(ex: A01)");
+    printf("Digite o codigo da primeira carta: ");
     scanf("%s", carta1);
     printf("Digite o nome da cidade: ");
     scanf("%s", nome_cidade1);
@@ -40,7 +40,7 @@ int main(){
     PIB_per_capta1 = (float)(pib1 / populacao1);
 
     //cadastro segunda carta
-    printf("\nDigite o codigo da segunda carta(ex: B02): ");
+    printf("\nDigite o codigo da segunda carta: ");
     scanf("%s", carta2);
     printf("Digite o nome da cidade: ");
     scanf("%s", nome_cidade2);
@@ -63,8 +63,14 @@ int main(){
     printf("\n--- Dados das Cartas ---\n");
     printf("\nCarta: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPontos Turisticos: %d\nDensidade populacional: %.2f\nPIB per capta: %.2f\n",
          carta1, nome_cidade1, populacao1, area1, pib1, pontos_turisticos1, densidade_populacional1, PIB_per_capta1);
-    printf("\nCarta: %s\nNome da Cidade: \nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões\nPontos Turisticos: %d\nDensidade populacional: %.2f\nPIB per capta: %.2f\n",
+    printf("\nCarta: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões\nPontos Turisticos: %d\nDensidade populacional: %.2f\nPIB per capta: %.2f\n",
          carta2, nome_cidade2, populacao2, area2, pib2, pontos_turisticos2, densidade_populacional2, PIB_per_capta2 );
+
+         //Descobrindo qual carta vencerá
+
+         printf("\n--- Resultado, 1 para verdadeiro e 0 para falso ---\n");
+         printf("Primeira carta é mais forte que a segunda? %d\n", (carta1 > carta2));
+         printf("Segunda carta é maior que a primeira? %d\n", (carta2 > carta1));
 
     return 0;
 
